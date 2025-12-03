@@ -1,0 +1,42 @@
+body:before{
+    content: "" ;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; /* thickness */
+    background: #b7cede;
+    z-index: 9999;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+.navbar {
+    color: #000000;
+}
+
+h1 {
+  text-align: center;
+  font-family: Georgia;
+  font-size: 50px;
+}
+
+p {
+  font-size: 20px;
+}
+
+.mypic {
+  width: 400px;
+  height: auto;
+}
+
+.titlepage {
+    color: #8aabc4;
+  display: flex;
+  align-items: center;  
+  justify-content: center;
+  gap: 100px;  
+  padding-top: 200px;
+}
