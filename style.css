@@ -1,42 +1,412 @@
-body:before{
-    content: "" ;
-    position: fixed;
+/* Nav Bar */
+
+.newnavbar{
+  background-color: #e2ebf7;
+  position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100px; /* thickness */
-    background: #b7cede;
+    height: 150px; /* thickness */
     z-index: 9999;
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+    gap: 100px;  
+    transition: height 0.3s ease, gap 0.3s ease;
+}
+
+.content {
+    height: 2000px; /* just to allow scrolling */
+    padding: 20px;
+  }
+
+.newnavbar.shrink{
+    height: 100px;
+    gap: 60px;
+    transition: height 0.3s, gap 0.3s;
+}
+
+.symbol{
+  width: 60px;
+}
+
+/* Navigate */
+
+nav a{
+  color: #000000;
+  text-decoration: none; /* removes underline */
+  margin: 0 15px;
+  font-size: 20px;
+  background-color: #a3b9d0;
+  border-radius: 50px;
+  padding: 8px 15px;
+ 
+}
+
+/* */
+.quote{
+  background-color:#e2ebf7;
+  margin-left:100px;
+  margin-right:100px;
+  padding:20px;
+  border-radius: 40px;
+  align-content:center;
+}
+
+/* Contact Section */
+
+.contactme{
+  width: 50%;
+  background-color:#e2ebf7;
+  margin-left:25%;
+  margin-right:25%;
+  padding:20px;
+  border-radius: 40px;
+  align-content:center;
+}
+
+.bottombar{
+  background-color:#e2ebf7;
+  margin-left:-5%;
+  width: 112%;
+  height: 100px; /* thickness */
+  gap: 100px;  
+  
 }
 
 body {
   background-color: rgb(255, 255, 255);
-}
-
-.navbar {
-    color: #000000;
+  margin: 200px 100px 0px 100px;
+  cursor: url("butterflycursor.png") 24 24, pointer;
 }
 
 h1 {
   text-align: center;
-  font-family: Georgia;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 50px;
+  color: #5e72a5;
+}
+
+h2 {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 30px;
+  color: #5e72a5;
+  text-align: center;
+}
+
+h3 {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+  color:#495982;
+  text-align:center;
 }
 
 p {
   font-size: 20px;
+  text-indent: 30px;
+  line-height: 1.5;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color:#495982;;
 }
 
 .mypic {
   width: 400px;
   height: auto;
+  border-radius: 50px;
 }
 
 .titlepage {
-    color: #8aabc4;
+  color: #5e72a5; /*#8aabc4*/
   display: flex;
   align-items: center;  
   justify-content: center;
   gap: 100px;  
-  padding-top: 200px;
+}
+
+.pic1{
+  width: 500px;
+}
+
+.pic2{
+  width: 400px;
+}
+
+.pic3{
+  width: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pic4{
+  width: 850px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pic5{
+  width: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pic6{
+  width: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pic7{
+  width: 400px;
+  height: 200px;
+}
+
+.pic8{
+  width: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.linkedin{
+  color: #000000;
+  text-decoration: none; /* removes underline */
+  margin: 0 15px;
+  font-size: 20px;
+  background-color: #5e72a5;
+  border-radius: 50px;
+  padding: 8px 15px;
+}
+
+.experience {
+  display:flex;
+  align-items: left;
+  justify-content: left;
+  gap: 100px;
+  padding: 100px;
+}
+
+.textbackground {
+  background-color: #e2ebf7;
+  padding: 20px 60px; /* top/bottom | left/right */
+  border-radius: 20px; /* optional rounded corners */
+  display: inline-block; /* keeps it tight but padded */
+}
+
+.passions {
+  background-color: #e2ebf7;
+  padding: 20px 30px; /* top/bottom | left/right */
+  border-radius: 20px; /* optional rounded corners */
+  width:80%;
+  margin-left:10%;
+  align-content:center;
+}
+
+.divnext2{
+  display: inline-block;
+  align-items: left;
+  justify-content: left
+}
+
+/* Main content padding so it doesn’t overlap the nav */
+.content {
+  margin-left: 150px; /* adjust based on nav width */
+  padding: 20px;
+}
+
+/* Container for dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown button */
+.dropbtn {
+  background-color:  #a3b9d0;
+  color: #333;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;                 /* hide */
+  position: absolute;            /* position under the button */
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside dropdown */
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;;
+}
+
+/* Hover effect */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Style button when active */
+.dropdown:hover .dropbtn {
+  background-color: #c9d9ec;
+}
+
+/* Contact section */
+input[type="text"],
+input[type="email"] ,input[type="textarea"]  select, textarea {
+  width: 70%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  margin-left:15%;
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+input[type=submit], select {
+  width: 70%; /* Full width */
+  padding: 10px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 1000px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  margin-left:15%;
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #a3b9d0;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #7c9bbc;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+/* Slideshow */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: #e2ebf7;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #e2ebf7;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+.same {
+  width: 100%;
+  object-fit: cover;
 }
