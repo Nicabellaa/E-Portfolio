@@ -65,13 +65,16 @@ nav a{
   align-content:center;
 }
 
-.bottombar{
-  background-color:#e2ebf7;
-  margin-left:-5%;
-  width: 112%;
-  height: 100px; /* thickness */
-  gap: 100px;  
-  
+.bottombar {
+  background-color: #e2ebf7;
+  height: 100px;
+
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw; /* pulls to full width */
+  margin-right: -50vw;
+  width: 100vw;        /* full viewport width */
 }
 
 body {
@@ -187,6 +190,13 @@ p {
   justify-content: left;
   gap: 100px;
   padding: 100px;
+}
+
+.coursework {
+  display:flex;
+  align-items: left;
+  justify-content: left;
+  gap: 50px;
 }
 
 .textbackground {
@@ -409,4 +419,17 @@ input[type=submit]:hover {
 .same {
   width: 100%;
   object-fit: cover;
+}
+
+button{
+  background-color:#e2ebf7;
+  padding: 20px 60px; /* top/bottom | left/right */
+  border-radius: 20px; /* optional rounded corners */
+  display: inline-block; /* keeps it tight but padded */
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size:25px;
+  color:#5e72a5;
+  border-top-color: #5e72a5;
+  outline: #5e72a5;
+  border-width: 5px;
 }
