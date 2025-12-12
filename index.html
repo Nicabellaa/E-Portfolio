@@ -203,14 +203,7 @@ function showSlides(n) {
             subject: this.subject.value,
             message: this.message.value
         })
-        .then(() => {
-            alert("Thank you for contacting us! You will recieve a response as soon as possible!");
-            this.reset();
-        })
-        .catch((error) => {
-            alert("Sorry you're message failed to send. Please try again later.");
-            console.error(error);
-        });
+        
     });
 </script> <br> <br> <br> <br>
 
